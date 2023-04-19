@@ -1,1 +1,8 @@
-@import './common';
+@import './utils/variables.scss';
+@import './base/reset';
+@import './base/common';
+@import './components/section';
+@import './components/container';
+@import './components/logo';
+@import './components/modal';
+@import './layouts/header.scss';
