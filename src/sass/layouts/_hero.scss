@@ -1,0 +1,87 @@
+.hero {
+  background-color: $bg-primary;
+  background-image: url('../images/starry-sky-mob-1x.jpg');
+
+  & .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 33px;
+    text-align: center;
+  }
+}
+
+.hero__pretitle {
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: 0.05em;
+}
+
+.hero__title {
+  margin-top: 24px;
+  font-family: 'Yeseva One';
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $accent-text-color-primary;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.hero__brain-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(
+    circle at center,
+    rgba(41, 80, 194, 0.4),
+    transparent 70%
+  );
+}
+
+.hero__brain {
+  z-index: 1;
+  width: 155px;
+  height: 155px;
+  background-image: url('../images/brain-mob-1x.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.hero__description {
+  margin-top: 22px;
+  max-width: 286px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.27;
+  letter-spacing: 0.05em;
+}
+
+.hero__arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $arrow-up-bg;
+}
+
+.hero__arrow-icon {
+  fill: $arrow-up-fill;
+}
+
+.hero__link {
+  margin-top: 6px;
+  font-size: 8px;
+  line-height: 1.37;
+  letter-spacing: 0.05em;
+}

@@ -1,12 +1,14 @@
 header {
   position: relative;
-  padding-top: 17px;
-  padding-bottom: 13px;
   background-color: $bg-primary;
+  padding-top: 15px;
+  padding-bottom: 15px;
 
   & .container {
     display: flex;
     align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
