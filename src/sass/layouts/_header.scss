@@ -1,0 +1,22 @@
+header {
+  position: relative;
+  padding-top: 17px;
+  padding-bottom: 13px;
+  background-color: $bg-primary;
+
+  & .container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.header__menu-btn {
+  width: 24px;
+  height: 16px;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.header__menu-icon {
+  fill: $menu-icon-fill;
+}
