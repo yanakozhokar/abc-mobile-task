@@ -1,0 +1,51 @@
+.quotation {
+  padding-top: 83px;
+  padding-bottom: 54px;
+  background-image: radial-gradient(
+      84.34% 50.29% at 48.75% 49.71%,
+      #2950c2 0%,
+      rgba(38, 91, 199, 0.96) 40.62%,
+      rgba(39, 98, 187, 0) 85.42%
+    ),
+    url('../images/blue-bg-mob-1x.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  & .container {
+    padding-left: 36px;
+    padding-right: 36px;
+    text-align: center;
+  }
+}
+
+.quotation__text {
+  position: relative;
+  font-family: 'Yeseva One';
+  font-size: 18px;
+  line-height: 1.27;
+  letter-spacing: 0.05em;
+  fill: $text-color-primary;
+}
+
+.quotation__text::before,
+.quotation__text::after {
+  content: '';
+}
+
+.quotation__quotes-open {
+  position: absolute;
+  top: -39px;
+  left: -35px;
+  width: 23px;
+  height: 22px;
+}
+
+.quotation__quotes-close {
+  position: absolute;
+  bottom: -23px;
+  right: -64px;
+  width: 23px;
+  height: 22px;
+  transform: rotate(-180deg);
+}

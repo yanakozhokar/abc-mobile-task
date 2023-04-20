@@ -64,6 +64,13 @@
   letter-spacing: 0.05em;
 }
 
+.hero__link-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .hero__arrow-container {
   display: flex;
   justify-content: center;
