@@ -4,9 +4,17 @@
   padding-bottom: 38px;
 
   & .container {
-    padding-left: 21px;
-    padding-right: 21px;
+    padding-left: 11px;
+    padding-right: 11px;
   }
+
+  & .btn-primary {
+    min-width: 200px;
+  }
+}
+
+.advice__description {
+  padding-right: 21px;
 }
 
 .advice__img-container {

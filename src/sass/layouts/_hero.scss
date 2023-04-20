@@ -11,15 +11,24 @@
     padding-top: 33px;
     text-align: center;
   }
+
+  & .btn-primary {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .hero__pretitle {
+  position: relative;
+  z-index: 1;
   font-size: 18px;
   line-height: 1.33;
   letter-spacing: 0.05em;
 }
 
 .hero__title {
+  position: relative;
+  z-index: 1;
   margin-top: 24px;
   font-family: 'Yeseva One';
   font-size: 30px;
@@ -56,6 +65,8 @@
 }
 
 .hero__description {
+  position: relative;
+  z-index: 1;
   margin-top: 22px;
   max-width: 286px;
   font-weight: 700;

@@ -1,0 +1,60 @@
+.recommendation {
+  position: relative;
+  padding-top: 56px;
+  padding-bottom: 13px;
+  font-family: 'Merriweather';
+  line-height: 1.43;
+  letter-spacing: 0.05em;
+  background-image: url('../images/starry-sky-mob-1x.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  & .accent-text {
+    font-weight: 900;
+  }
+
+  & .btn-secondary {
+    position: relative;
+    z-index: 1;
+    margin-top: 33px;
+    min-width: 200px;
+  }
+}
+
+.recommendation__description {
+  position: relative;
+  z-index: 1;
+  font-size: 15px;
+}
+
+.recommendation__description-window {
+  position: relative;
+  z-index: 1;
+  margin-top: 20px;
+  padding: 26px 14px;
+  border-radius: 20px;
+  color: $text-color-thirdly;
+  background-color: rgba(243, 243, 242, 0.8);
+}
+
+.lightning-right {
+  position: absolute;
+  top: 64px;
+  right: 0;
+  width: 165px;
+  height: 165px;
+  background-image: url('../images/lightning-right-mob-1x.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.lightning-left {
+  position: absolute;
+  bottom: 32px;
+  left: 0;
+  width: 165px;
+  height: 165px;
+  background-image: url('../images/lightning-left-mob-1x.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
