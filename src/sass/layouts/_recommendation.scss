@@ -4,7 +4,6 @@
   padding-bottom: 13px;
   font-family: 'Merriweather';
   line-height: 1.43;
-  letter-spacing: 0.05em;
   background-image: url('../images/starry-sky-mob-1x.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -35,6 +34,15 @@
   border-radius: 20px;
   color: $text-color-thirdly;
   background-color: rgba(243, 243, 242, 0.8);
+}
+
+.copyright {
+  margin-top: 52px;
+  font-family: 'Roboto';
+  font-size: 10px;
+  line-height: 2.3;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .lightning-right {
