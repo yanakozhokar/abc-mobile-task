@@ -8,6 +8,12 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  & .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   & .accent-text {
     font-weight: 900;
   }
