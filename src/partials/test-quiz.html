@@ -2,7 +2,7 @@
   <div class="quiz__indicator"></div>
   <form class="quiz__form">
     <ul class="quiz__list">
-      <li class="quiz__item--hidden">
+      <li class="quiz__item--visible">
         <p class="quiz__question">Ваш пол:</p>
         <ul class="quiz__answers-list">
           <li class="quiz__answers-item-text">
@@ -554,19 +554,18 @@
           </li>
         </ul>
       </li>
-      <li class="quiz__item--visible">
-        <p class="quiz__question-figures">
-          Выберите правильную фигуру из четырех пронумерованных.
-        </p>
-        <div class="quiz__figures-img-container">
+      <li class="quiz__item--hidden">
+        <p class="quiz__question">Вставьте подходящее число</p>
+        <div class="quiz__star-img-container">
           <img
-            src="./images/drawn-figures-mob-1x.jpg"
-            alt="Девять фигур, похожих на человека"
-            width="185"
-            height="235"
-            class="quiz__figures-img"
+            src="./images/star-mob-1x.jpg"
+            alt="Пятиконечная звезда с цифрами по углам"
+            width="228"
+            height="207"
+            class="quiz__star-img"
           />
         </div>
+        <div class="quiz__line"></div>
         <ul class="quiz__answers-list-figures">
           <li class="quiz__answers-item-figure">
             <label class="quiz__answer-label-figure">
@@ -575,7 +574,7 @@
                 name="human-figures"
                 class="quiz__answer-input-figure"
               />
-              1
+              34
             </label>
           </li>
           <li class="quiz__answers-item-figure">
@@ -585,7 +584,7 @@
                 name="human-figures"
                 class="quiz__answer-input-figure"
               />
-              2
+              36
             </label>
           </li>
           <li class="quiz__answers-item-figure">
@@ -595,7 +594,7 @@
                 name="human-figures"
                 class="quiz__answer-input-figure"
               />
-              3
+              53
             </label>
           </li>
           <li class="quiz__answers-item-figure">
@@ -605,12 +604,32 @@
                 name="human-figures"
                 class="quiz__answer-input-figure"
               />
-              4
+              44
+            </label>
+          </li>
+          <li class="quiz__answers-item-figure">
+            <label class="quiz__answer-label-figure">
+              <input
+                type="radio"
+                name="human-figures"
+                class="quiz__answer-input-figure"
+              />
+              66
+            </label>
+          </li>
+          <li class="quiz__answers-item-figure">
+            <label class="quiz__answer-label-figure">
+              <input
+                type="radio"
+                name="human-figures"
+                class="quiz__answer-input-figure"
+              />
+              42
             </label>
           </li>
         </ul>
       </li>
     </ul>
   </form>
-  <button type="button" class="btn-primary" disabled>Далее</button>
+  <button type="button" class="btn-form" disabled>Далее</button>
 </section>

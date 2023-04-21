@@ -13,20 +13,15 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
-  & .btn-primary {
-    margin-top: auto;
-  }
 }
 
 .quiz__indicator {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: auto;
   width: 80%;
   height: 11px;
   border-radius: 10px;
-  background-color: $indicator-bg;
+  background-color: $indicator-empty-bg;
 }
 
 .quiz__form {
@@ -243,4 +238,27 @@
 
 .smaller-text {
   font-size: 16px;
+}
+
+.quiz__star-img-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 228px;
+  height: 207px;
+}
+
+.quiz__star-img {
+  width: 100%;
+  height: 100%;
+}
+
+.quiz__line {
+  width: 100%;
+  height: 4px;
+  background-color: #f2f3f3;
+  opacity: 0.15;
+}
+
+.btn-form {
+  @extend .btn-primary;
 }
