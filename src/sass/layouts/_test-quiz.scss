@@ -28,30 +28,58 @@
   background-color: $indicator-bg;
 }
 
+.quiz__form {
+  flex-grow: 1;
+}
+
+.quiz__list {
+  height: 100%;
+}
+
+.quiz__item--active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.quiz__item--hidden {
+  @extend .is-hidden;
+}
+
 .quiz__question {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 280px;
   font-size: 20px;
   line-height: 1.3;
   text-align: center;
 }
 
-.quiz__aswers-list {
+.quiz__answers-list {
   display: flex;
   flex-direction: column;
   gap: 8px;
   margin-top: 46px;
-  font-size: 18px;
 }
 
-.text {
-  padding: 12px 35px;
+.quiz__answers-item-text {
   width: 100%;
   background: rgba(242, 243, 243, 0.15);
+}
+
+.quiz__answers-item-text:has(.quiz__answer-input:checked) {
+  color: $text-color-secondary;
+  background-color: $active-answer;
 }
 
 .quiz__answer-label {
   display: flex;
   align-items: center;
   gap: 39px;
+  padding: 12px 35px;
+  width: 100%;
+  height: 100%;
 }
 
 .quiz__answer-input {
@@ -66,5 +94,78 @@
 }
 
 .quiz__answer-input:checked {
-  background-color: #fff;
+  border-color: #272727;
+  background-color: $active-input-circle;
+}
+
+.quiz__aswers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 18px;
+}
+
+.quiz__aswers-list-colors {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 21px;
+  row-gap: 24px;
+  margin-top: 29px;
+}
+
+.quiz__answers-item-color {
+  width: 69px;
+  height: 69px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.quiz__answers-item-color:has(.quiz__answer-input-color:checked) {
+  border: 6px solid $active-answer;
+}
+
+.grey {
+  background-color: #a8a8a8;
+}
+
+.blue {
+  background-color: #0000a9;
+}
+
+.green {
+  background-color: #00a701;
+}
+
+.red {
+  background-color: #f60100;
+}
+
+.yellow {
+  background-color: #fdff19;
+}
+
+.brown {
+  background-color: #a95403;
+}
+
+.black {
+  background-color: #000000;
+}
+
+.violet {
+  background-color: #850068;
+}
+
+.turquoise {
+  background-color: #46b2ac;
+}
+
+.quiz__answer-input-color {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.quiz__answer-input-color:checked + .quiz__answer-label::before {
+  content: none;
 }
