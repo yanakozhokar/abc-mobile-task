@@ -1,15 +1,38 @@
-const formBtnRef = document.querySelector('.btn-form');
-const currentQuestion = document.querySelector('.quiz__item--visible');
+const quizForm = document.querySelector('.quiz__form');
+const quizItems = document.querySelector('.quiz__list').children;
+const quizBtn = document.querySelector('.btn-form');
 const answers = [];
 
-currentQuestion.addEventListener('click', onInputClick);
-formBtnRef.addEventListener('click', onBtnClick);
+quizForm.addEventListener('change', () => {
+  const currentItem = quizForm.querySelector('.quiz__item--visible');
+  const currentAnswer = currentItem.querySelectorAll(
+    'input[type="radio"]:checked'
+  );
+  if (currentAnswer.length > 0) {
+    quizBtn.removeAttribute('disabled');
+  } else {
+    quizBtn.setAttribute('disabled', 'disabled');
+  }
+});
 
-function onInputClick(event) {
-  console.log('Клик по инпуту');
-}
+quizBtn.addEventListener('click', () => {
+  const currentItem = quizForm.querySelector('.quiz__item--visible');
+  const currentIndex = Array.from(quizItems).indexOf(currentItem);
+  currentItem.classList.remove('quiz__item--visible');
+  currentItem.classList.add('quiz__item--hidden');
+  const nextItem = quizItems[currentIndex + 1];
 
-function onBtnClick(event) {
-  const currentAnswer = currentQuestion.querySelector('input[checked]');
-  console.log(currentAnswer);
-}
+  if (nextItem) {
+    nextItem.classList.remove('quiz__item--hidden');
+    nextItem.classList.add('quiz__item--visible');
+    quizBtn.setAttribute('disabled', 'disabled');
+  } else {
+    const checkedInputs = document.querySelectorAll(
+      'input[type="radio"]:checked'
+    );
+    checkedInputs.forEach(el => {
+      const { name, value } = el;
+      answers.push({ [name]: value });
+    });
+  }
+});
