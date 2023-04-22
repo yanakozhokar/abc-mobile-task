@@ -1,32 +1,47 @@
-const quizForm = document.querySelector('.quiz__form');
-const quizItems = document.querySelector('.quiz__list').children;
-const quizBtn = document.querySelector('.btn-form');
+const quizSectionRef = document.querySelector('.quiz');
+const quizFormRef = document.querySelector('.quiz__form');
+const quizItemsRef = document.querySelector('.quiz__list').children;
+const quizBtnRef = document.querySelector('.btn-form');
+const quizIndicatorEmptyRef = document.querySelector('.quiz__indicator');
+const quizIndicatorFillRef = document.querySelector('.quiz__indicator-fill');
 const answers = [];
 
-quizForm.addEventListener('change', () => {
-  const currentItem = quizForm.querySelector('.quiz__item--visible');
-  const currentAnswer = currentItem.querySelectorAll(
+const maxFillWidth =
+  quizIndicatorEmptyRef.clientWidth -
+  quizIndicatorEmptyRef.clientWidth / quizItemsRef.length;
+
+quizIndicatorFillRef.style.width = `${Math.round(
+  maxFillWidth / quizItemsRef.length
+)}px`;
+
+quizFormRef.addEventListener('change', () => {
+  const currentItem = quizFormRef.querySelector('.quiz__item--visible');
+  const checkedInput = currentItem.querySelectorAll(
     'input[type="radio"]:checked'
   );
-  if (currentAnswer.length > 0) {
-    quizBtn.removeAttribute('disabled');
-  } else {
-    quizBtn.setAttribute('disabled', 'disabled');
+  if (checkedInput.length > 0) {
+    quizBtnRef.removeAttribute('disabled');
   }
 });
 
-quizBtn.addEventListener('click', () => {
-  const currentItem = quizForm.querySelector('.quiz__item--visible');
-  const currentIndex = Array.from(quizItems).indexOf(currentItem);
+quizBtnRef.addEventListener('click', () => {
+  const currentItem = quizFormRef.querySelector('.quiz__item--visible');
+  const currentIndex = Array.from(quizItemsRef).indexOf(currentItem);
   currentItem.classList.remove('quiz__item--visible');
   currentItem.classList.add('quiz__item--hidden');
-  const nextItem = quizItems[currentIndex + 1];
+  const nextItem = quizItemsRef[currentIndex + 1];
+
+  quizIndicatorFillRef.style.width = `${Math.round(
+    ((currentIndex + 2) * maxFillWidth) / quizItemsRef.length
+  )}px`;
 
   if (nextItem) {
     nextItem.classList.remove('quiz__item--hidden');
     nextItem.classList.add('quiz__item--visible');
-    quizBtn.setAttribute('disabled', 'disabled');
+    quizBtnRef.setAttribute('disabled', 'disabled');
   } else {
+    quizSectionRef.classList.add('is-hidden');
+
     const checkedInputs = document.querySelectorAll(
       'input[type="radio"]:checked'
     );
