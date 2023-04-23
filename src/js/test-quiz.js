@@ -4,6 +4,8 @@ const quizItemsRef = document.querySelector('.quiz__list').children;
 const quizBtnRef = document.querySelector('.btn-form');
 const quizIndicatorEmptyRef = document.querySelector('.quiz__indicator');
 const quizIndicatorFillRef = document.querySelector('.quiz__indicator-fill');
+const resultsSectionRef = document.querySelector('.results');
+const resultsLoadingRef = document.querySelector('.results__loading');
 const answers = [];
 
 const maxFillWidth =
@@ -41,6 +43,8 @@ quizBtnRef.addEventListener('click', () => {
     quizBtnRef.setAttribute('disabled', 'disabled');
   } else {
     quizSectionRef.classList.add('is-hidden');
+    resultsSectionRef.classList.remove('is-hidden');
+    setTimeout(() => resultsLoadingRef.classList.add('is-hidden'), 3000);
 
     const checkedInputs = document.querySelectorAll(
       'input[type="radio"]:checked'

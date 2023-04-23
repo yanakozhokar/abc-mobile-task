@@ -1,0 +1,16 @@
+.loader {
+  fill: $loader-fill;
+  animation: loader-twisting;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes loader-twisting {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

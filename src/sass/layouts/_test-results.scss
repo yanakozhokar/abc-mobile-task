@@ -1,0 +1,71 @@
+.results {
+  position: fixed;
+  width: 100vw;
+  height: calc(100% - 47px);
+  padding-top: 17px;
+  padding-bottom: 25px;
+  background-color: $bg-primary;
+  background-image: url('../images/starry-sky-mob-1x.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  & .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  & .loader {
+    margin-top: 33px;
+  }
+}
+
+.results__indicator {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 11px;
+  border-radius: 10px;
+  background-color: $indicator-full-bg;
+}
+
+.results__processing {
+  margin-top: 49px;
+  max-width: 237px;
+  font-size: 23px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.results__loader-description {
+  width: 245px;
+}
+
+.results__loader-text {
+  margin-top: 28px;
+  font-size: 14px;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.results__loader-text::after {
+  content: '';
+  animation: dots 2s linear infinite;
+}
+
+@keyframes dots {
+  0% {
+    content: '.';
+  }
+  25% {
+    content: '..';
+  }
+  50% {
+    content: '...';
+  }
+  75% {
+    content: '....';
+  }
+}
