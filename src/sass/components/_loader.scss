@@ -1,9 +1,21 @@
 .loader {
+  width: 65px;
+  height: 68px;
   fill: $loader-fill;
   animation: loader-twisting;
   animation-duration: 2s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+
+  @media (min-width: 768px) {
+    width: 75px;
+    height: 78px;
+  }
+
+  @media (min-width: 768px) {
+    width: 85px;
+    height: 88px;
+  }
 }
 
 @keyframes loader-twisting {
