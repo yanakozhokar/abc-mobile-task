@@ -1,4 +1,6 @@
 .quotation {
+  display: flex;
+  align-items: center;
   padding-top: 83px;
   padding-bottom: 54px;
   background-image: radial-gradient(
@@ -17,6 +19,14 @@
     padding-right: 36px;
     text-align: center;
   }
+
+  @media (min-width: 768px) {
+    min-height: 450px;
+  }
+
+  @media (min-width: 1200px) {
+    min-height: 600px;
+  }
 }
 
 .quotation__text {
@@ -25,6 +35,14 @@
   font-size: 18px;
   line-height: 1.27;
   fill: $text-color-primary;
+
+  @media (min-width: 768px) {
+    font-size: 19px;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 22px;
+  }
 }
 
 .quotation__text::before,
@@ -38,6 +56,11 @@
   left: -35px;
   width: 23px;
   height: 22px;
+
+  @media (min-width: 1200px) {
+    top: -17px;
+    left: -367px;
+  }
 }
 
 .quotation__quotes-close {
@@ -64,11 +87,35 @@
 
   & .btn-primary {
     min-width: 200px;
+
+    @media (min-width: 1200px) {
+      margin-top: 20px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    min-height: 600px;
   }
 }
 
 .advice__description {
   padding-right: 21px;
+
+  @media (min-width: 768px) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+    font-size: 17px;
+    text-align: center;
+  }
+
+  @media (min-width: 1200px) {
+    min-width: 900px;
+    font-size: 20px;
+    text-align: justify;
+  }
 }
 
 .advice__img-container {
@@ -76,6 +123,10 @@
   margin-left: auto;
   margin-right: auto;
   width: 232px;
+
+  @media (min-width: 1200px) {
+    margin-top: 50px;
+  }
 }
 
 .advice__img {
@@ -109,6 +160,10 @@
     margin-top: 33px;
     min-width: 200px;
   }
+
+  @media (min-width: 1200px) {
+    min-height: 600px;
+  }
 }
 
 .recommendation__description {
@@ -134,6 +189,10 @@
   line-height: 2.3;
   text-align: center;
   color: rgba(255, 255, 255, 0.5);
+
+  @media (min-width: 1200px) {
+    margin-bottom: auto;
+  }
 }
 
 .lightning-right {
