@@ -104,6 +104,7 @@
   padding-right: 21px;
 
   @media (min-width: 768px) {
+    padding-right: 0;
     margin-left: auto;
     margin-right: auto;
     max-width: 700px;
@@ -159,9 +160,16 @@
     z-index: 1;
     margin-top: 33px;
     min-width: 200px;
+
+    @media (min-width: 1200px) {
+      margin-top: 50px;
+    }
   }
 
   @media (min-width: 1200px) {
+    padding-top: 170px;
+    display: flex;
+    align-items: initial;
     min-height: 600px;
   }
 }
@@ -170,6 +178,12 @@
   position: relative;
   z-index: 1;
   font-size: 15px;
+
+  @media (min-width: 1200px) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+  }
 }
 
 .recommendation__description-window {
@@ -180,6 +194,13 @@
   border-radius: 20px;
   color: $text-color-thirdly;
   background-color: rgba(243, 243, 242, 0.8);
+
+  @media (min-width: 1200px) {
+    margin-top: 50px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .copyright {
@@ -191,7 +212,7 @@
   color: rgba(255, 255, 255, 0.5);
 
   @media (min-width: 1200px) {
-    margin-bottom: auto;
+    margin-top: auto;
   }
 }
 
