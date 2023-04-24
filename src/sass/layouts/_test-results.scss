@@ -9,6 +9,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  overflow-y: auto;
 
   & .container {
     display: flex;
@@ -220,4 +221,8 @@
   left: 0;
   width: 175px;
   height: 175px;
+}
+
+.results__request {
+  margin-top: 30px;
 }
