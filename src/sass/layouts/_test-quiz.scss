@@ -87,6 +87,11 @@
   height: 100%;
 }
 
+.quiz__item--visible:has(.quiz__answer-input[name='gender']) {
+  justify-content: center;
+  gap: 46px;
+}
+
 .quiz__answer-label:has(.quiz__answer-input[name='life-style']) {
   gap: 15px;
 }

@@ -14,6 +14,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 
   & .loader {
@@ -68,4 +69,109 @@
   75% {
     content: '....';
   }
+}
+
+.results__calculated-title {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.07;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.results__calculated-description {
+  margin-top: 13px;
+  font-size: 14px;
+  line-height: 1.29;
+}
+
+.results__hurry {
+  margin-top: 22px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $accent-text-color-secondary;
+}
+
+.results__secure {
+  margin-top: 12px;
+  padding: 15px 12px;
+  max-width: 256px;
+  border-radius: 6px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 8px;
+  line-height: 1.75;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: $comment-bg;
+}
+
+.results__acception-time {
+  margin-top: 13px;
+  max-width: 240px;
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: $accent-text-color-secondary;
+}
+
+.results__timer {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.results__call-btn {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-top: 10px;
+  padding: 25px 15px;
+  max-width: 290px;
+  border: 1px solid $call-btn-bg;
+  border-radius: 5px;
+  color: $text-color-primary;
+  background-color: $call-btn-bg;
+
+  &:hover > .results__call-text {
+    text-decoration: underline;
+  }
+}
+
+.results__call-img {
+  fill: currentColor;
+}
+
+.results__call-text {
+  font-family: 'Roboto';
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 1.2;
+  text-align: start;
+  letter-spacing: 0.05em;
+}
+
+.results__lighting-right {
+  position: absolute;
+  top: 367px;
+  right: -89px;
+  width: 175px;
+  height: 175px;
+  background-image: url('../images/lightning-bottom-right-mob-1x.png');
+  background-repeat: no-repeat;
+}
+
+.results__lighting-left {
+  background-image: url('../images/lightning-bottom-left-mob-1x.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 323px;
+  left: 0;
+  width: 175px;
+  height: 175px;
 }

@@ -1,5 +1,7 @@
-<section class="results is-hidden">
-  <div class="results__loading">
+<section class="results">
+  <!-- is hidden-->
+  <div class="results__loading is-hidden">
+    <!-- not hidden-->
     <div class="results__indicator"></div>
     <div class="container">
       <h2 class="is-hidden">Результаты теста.</h2>
@@ -12,4 +14,31 @@
       </div>
     </div>
   </div>
+  <h2 class="is-hidden">Результаты теста</h2>
+  <div class="container">
+    <p class="results__calculated-title">Ваш результат рассчитан:</p>
+    <p class="results__calculated-description">
+      <span class="underline">Вы относитесь к 3%</span> респондентов, чей
+      уровень интеллекта более чем на 15 пунктов отличается от среднего в
+      большую или меньшую сторону!
+    </p>
+    <strong class="results__hurry">Скорее получите свой результат!</strong>
+    <p class="results__secure">
+      В целях защиты персональных данных результат теста, их подробная
+      интерпретация и рекомендации доступны в виде голосового сообщения по
+      звонку с вашего мобильного телефона
+    </p>
+    <p class="results__acception-time">
+      Звоните скорее, запись доступна всего
+      <span class="results__timer">10:00</span> минут
+    </p>
+    <button class="results__call-btn">
+      <svg width="29" height="28" class="results__call-img">
+        <use href="./images/icons.svg#icon-phone"></use>
+      </svg>
+      <p class="results__call-text">Позвонить и прослушать результат</p>
+    </button>
+  </div>
+  <div class="results__lighting-right"></div>
+  <div class="results__lighting-left"></div>
 </section>
