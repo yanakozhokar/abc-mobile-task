@@ -1,0 +1,9 @@
+.test-header {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  @media (min-width: 768px) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}

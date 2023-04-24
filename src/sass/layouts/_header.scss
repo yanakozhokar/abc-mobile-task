@@ -53,6 +53,10 @@ header {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
 
 .header__text {
@@ -61,4 +65,8 @@ header {
   line-height: 1.16;
   text-transform: uppercase;
   color: $accent-text-color-primary;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
