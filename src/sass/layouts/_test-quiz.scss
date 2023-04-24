@@ -233,11 +233,15 @@
   @extend .quiz__question;
   max-width: 290px;
   font-size: 18px;
+
+  @media (min-width: 1200px) {
+    max-width: 800px;
+    font-size: 22px;
+  }
 }
 
 .quiz__figures-img-container {
   width: 185px;
-  height: 235px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -249,6 +253,10 @@
 .quiz__answers-list-figures {
   display: flex;
   justify-content: space-around;
+
+  @media (min-width: 1200px) {
+    font-size: 24px;
+  }
 }
 
 .quiz__answers-item-figure {
@@ -256,6 +264,11 @@
   height: 41px;
   color: $answer-text;
   background-color: $answer-bg-secondary;
+
+  @media (min-width: 1200px) {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .quiz__answers-item-figure:has(.quiz__answer-input-figure:checked) {
@@ -294,6 +307,10 @@
 
 .smaller-text {
   font-size: 16px;
+
+  @media (min-width: 1200px) {
+    font-size: 24px;
+  }
 }
 
 .quiz__star-img-container {
