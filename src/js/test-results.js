@@ -1,12 +1,4 @@
-const headerTextRef = document.querySelector('.header__text');
 const resultsTimerRef = document.querySelector('.results__timer');
-
-headerTextRef.textContent = 'Готово!';
-headerTextRef.style = `font-size: 20px;
-line-height: 1.15;
-letter-spacing: 0.1em;
-text-transform: uppercase;
-margin-left: 25px`;
 
 class Timer {
   constructor() {
